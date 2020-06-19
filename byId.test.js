@@ -1,4 +1,5 @@
 const byId = require('./byId.js').default;
+
 it('Should work', () => {
   const users = [
     {
@@ -39,4 +40,13 @@ it('Should work', () => {
       LastName: 'Corty'
     }
   });
-})
+});
+
+it('Should work too', () => {
+  expect(byId([])).toEqual({});
+  expect(byId(0)).toEqual({});
+  expect(byId(1)).toEqual({});
+  expect(byId('abc')).toEqual({});
+  expect(byId()).toEqual({});
+  expect(byId(null)).toEqual({});
+});

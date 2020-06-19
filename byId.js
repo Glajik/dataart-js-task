@@ -3,7 +3,7 @@ function transform(acc, item) {
 }
 
 function byId(items) {
-  if (!items.length) {
+  if (!items || typeof items === 'string' || !items.length) {
     return {};
   }
   return items.reduce(transform, {});
